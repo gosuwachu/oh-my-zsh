@@ -20,6 +20,8 @@ if [[ -z "$ZSH_CUSTOM" ]]; then
     ZSH_CUSTOM="$ZSH/custom"
 fi
 
+compdef() {
+}
 
 is_plugin() {
   local base_dir=$1
@@ -52,7 +54,7 @@ fi
 
 # Load and run compinit
 autoload -U compinit
-compinit -i -d "${ZSH_COMPDUMP}"
+#compinit -i -d "${ZSH_COMPDUMP}"
 
 # Load all of the plugins that were defined in ~/.zshrc
 for plugin ($plugins); do
